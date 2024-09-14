@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Way Out</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="../grooming/style.css" />
+  <body>
+    <header class="container">
+      <img src="../images/logo-color.png" alt="Way Out" id="logo" />
+      <ul class="navbar">
+        <li><a class="border" id="Home" href="">Home</a></li>
+        <li><a class="border" id="About" href="">About Us</a></li>
+        <li><a class="border" id="Services" href="">Services</a></li>
+        <li><a class="border" id="Pricing" href="">Pricing</a></li>
+        <li><a class="border" id="Stories" href="">Success Stories</a></li>
+        <li><a class="border" id="Contact" href="">Contact Us</a></li>
+      </ul>
+      <button id="signinbutton" onclick="nextpage()">Sign in</button>
+    </header>
+    <div class="container2">
+      <h1>Your way out to a desciplined life</h1>
+      <button class="signinbutton2">Starts here</button>
+      <!-- <a href="http://"></a> -->
+    </div>
+
+    <script>
+      //  // use this when the onclick event is already initiallized in the html
+      // function nextpage() {
+      //   window.open("../markup/signinpage.html", "_blank");
+      // }
+
+      // use this when the onclick event isn't initiallized in the html
+      let signinbutton = document.getElementById("signinbutton");
+      signinbutton.onclick = function nextpage(){
+        signinbutton = window.open("../markup/signinpage.html","_blank");
+      }
+
+      // use this when the onclick event isn't initiallized in the html
+      // document.getElementById("signinbutton").onclick = function () {
+      //   window.open("../markup/signinpage.html", "_blank");
+      // };
+      
+    </script>
+  </body>
+</html>
+
+<!-- onclick="window.location.href='../markup/signinpage.html';"  -->

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In Page</title>
+  </head>
+  <!-- <link rel="stylesheet" href="../grooming/style.css"> -->
+  <!-- <link rel=”stylesheet”
+  href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”> -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+
+  <style>
+    body{
+      background-color: rgb(225, 255, 245);
+      /* margin: 0%; */
+      /* padding: 0%; */
+    }
+    #totalsigninbox {
+      background-color: beige;
+      border: 2px solid rgb(55, 54, 54);
+      border-radius: 10px;
+      width: 413px;
+      /* height: 630px; */
+      height: 100%;
+      margin: auto;
+    }
+    #heading {
+      /* border: 2px solid rebeccapurple; */
+      width: 413px;
+      height: 50px;
+      margin: auto;
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+    }
+    .display {
+      display: block;
+      font-weight: bold;
+      font-size: 23px;
+    }
+    .login_container {
+      /* border: 2px solid rgb(14, 13, 13); */
+      width: 413px;
+      /* height: 900px; */
+      height: 100%;
+      margin: auto;
+    }
+    #userid {
+      width: 380px;
+      height: 42px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: lighter;
+      color: tomato;
+    }
+    #password {
+      width: 320px;
+      height: 42px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: lighter;
+      color: tomato;
+    }
+    .useridbox {
+      /* border: 2px solid rgb(124, 91, 232); */
+      padding: 12px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+    }
+    .passwordbox {
+      /* border: 2px solid rgb(124, 91, 232); */
+      padding: 12px;
+      margin-top: 0px;
+      /* margin-bottom: 10px; */
+    }
+    .passwordhidenseek {
+      /* border: 2px solid red; */
+      display: flex;
+      justify-content: space-between;
+    }
+    #passwordhidenseekbtn {
+      border: 2px solid black;
+      width: 50px;
+      border-radius: 6px;
+      font-size: 19px;
+    }
+    #passwordhidenseekbtn:hover {
+      cursor: pointer;
+    }
+    div > p > a {
+      font-size: 17px;
+      text-decoration: none;
+      color: #33a768;
+    }
+    #signinbtn {
+      border: 2px solid black;
+      display: block;
+      border-radius: 24px;
+      width: 373px;
+      height: 55px;
+      margin: auto;
+      /* margin-top: 24px; */
+      background-color: #15efdb;
+      font-size: 25px;
+      color: #363331;
+      font-weight: bold;
+    }
+    #signinbtn:hover {
+      /* border: 3px solid #00c7b3; */
+      cursor: pointer;
+      background-color: #0fd6c2;
+    }
+    #privacypolicy {
+      /* border: 2px solid salmon; */
+      width: 381px;
+      height: 42px;
+      margin: auto;
+      margin-top: 18px;
+    }
+    #privacypolicy > a {
+      text-decoration: none;
+    }
+    .autosignin {
+      order: 2px solid rgb(226, 102, 102);
+      height: 153px;
+      margin-top: 29px;
+      margin-bottom: -33px;
+    }
+    #Gsigninbtn {
+      border: 2px solid black;
+      display: block;
+      border-radius: 24px;
+      width: 373px;
+      height: 44px;
+      margin: auto;
+      margin-top: 24px;
+      background-color: #c7e59a;
+      font-size: 20px;
+      color: #363331;
+      font-weight: bold;
+    }
+    #Gsigninbtn:hover {
+      cursor: pointer;
+      background-color: #b7e672;
+    }
+    #Asigninbtn {
+      border: 2px solid black;
+      display: block;
+      border-radius: 24px;
+      width: 373px;
+      height: 44px;
+      margin: auto;
+      margin-top: 24px;
+      background-color: #c7e59a;
+      font-size: 20px;
+      color: #363331;
+      font-weight: bold;
+    }
+    #Asigninbtn:hover {
+      cursor: pointer;
+      background-color: #b7e672;
+    }
+    #newAccount {
+      /* order: 2px solid steelblue; */
+      width: 223px;
+      height: 42px;
+      margin: auto;
+      font-size: 17px;
+    }
+    #newAccount a {
+      border: 1px solid steelblue;
+      border-radius: 4px;
+      background-color: rgb(104, 159, 204);
+      display: inline-block;
+      font-weight: bold;
+      width: 23pc;
+      width: 68px;
+      padding: 2px;
+      color: rgb(246, 237, 226);
+    }
+    #newAccount a:hover {
+      border: 2px solid rgb(26, 109, 176);
+      cursor: pointer;
+      background-color: rgb(33, 126, 203);;
+    }
+  </style>
+  <body>
+    <div id="totalsigninbox">
+      <h1 id="heading">Please Sign in</h1>
+      <form action="" class="login_container">
+        <div class="useridbox">
+          <label for="userid" class="display">Enter email/phone no.:</label>
+          <input type="text" id="userid" name="userid" class="display" />
+        </div>
+        <div class="passwordbox">
+          <label for="password" class="display">Enter password:</label>
+          <div class="passwordhidenseek">
+            <input
+              type="password"
+              id="password"
+              class="display"
+              name="password"
+            />
+            <button
+              type="button"
+              id="passwordhidenseekbtn"
+              onclick="hidenseek()"
+            >
+              <i class="fa-solid fa-eye-slash"></i>
+            </button>
+          </div>
+          <p><a href="">forgot password?</a></p>
+        </div>
+        <button id="signinbtn">Sign in</button>
+        <p id="privacypolicy">
+          By clicking Continue, you agree to our <a href="">User Agreement</a>,
+          <a href="">Privacy Policy</a>, and <a href="">Cookie Policy</a>.
+        </p>
+        <div class="autosignin">
+          <button id="Gsigninbtn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="20" viewBox="-3 -7 48 50">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+            </svg> Continue with Google</button>
+          <button id="Asigninbtn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="20" viewBox="0 -3 50 50">
+            <path d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"></path>
+            </svg>Continue with Apple</button>
+        </div>
+        <div id="newAccount">
+          <p>new to our website? <a href="">Join now</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let inputtype = document.getElementById(`password`);
+      function hidenseek() {
+        if (inputtype.type === `password`) {
+          inputtype.type = `text`;
+          document.getElementById(`passwordhidenseekbtn`).innerHTML =
+            '<i class="fa-solid fa-eye-slash"></i>';
+          } else {
+            inputtype.type = `password`;
+            document.getElementById(`passwordhidenseekbtn`).innerHTML =
+              '<i class="fa-solid fa-eye"></i>';
+        }
+      }
+    </script>
+  </body>
+</html>

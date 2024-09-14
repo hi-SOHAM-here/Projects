@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Flip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0%;
+      padding: 0%;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: bisque;
+    }
+    section {
+      height: 100vh;
+      width: 100%;
+      /* background-color: #121321; */
+      background-color: #022d34;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    section::before {
+      content: "";
+      position: absolute;
+      /* border: 2px solid red; */
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f3f5f5, #169080);
+      transform: translate(-170px, -70px);
+    }
+    section::after {
+      content: "";
+      position: absolute;
+      /* border: 2px solid red; */
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background: linear-gradient(-45deg,  #f3f5f5, #169080);
+      transform: translate(170px, 70px);
+      /* z-index: -1; */
+    }
+    .card{
+      width: 323.52755906px;
+      height: 188.018898px;
+      z-index: 1;
+      transform-style: preserve-3d;
+      transition: all 0.5s ease-in-out;
+    }
+    .card:hover{
+        transform: rotateY(180deg);
+    }
+    .mastercard-front {
+      position: absolute;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      height: 100%;
+      border-radius: 32.338583px;
+      padding: 8px;
+      backdrop-filter: blur(25px);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: /*10px 10px 5px rgba(0, 0, 0, 0.25),*/ -5px -5px 20px 0px rgba(0, 0, 0, 0.25);
+      backface-visibility: hidden;
+    }
+    .head {
+      /* border: 2px solid wheat; */
+      border-radius: 11.338582677px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mastercard_icon {
+      height: 45px;
+      width: 45px;
+    }
+    .head-left {
+      width: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-left: 6px;
+    }
+    .head-left > p {
+      margin: 0px;
+      color: bisque;
+    }
+    #chip_img {
+      margin-top: 6px;
+      margin-right: 16px;
+      height: 40px;
+      width: 47px;
+    }
+    .mid {
+      /* border: 2px solid bseige; */
+      margin-left: 16px;
+      color: bisque;
+      margin-top: 8px;
+    }
+    .numberHeading {
+      margin-top: 6px;
+      margin-bottom: 7px;
+      font-weight: 400;
+    }
+    .actualnumber {
+      margin-top: 0px;
+      font-weight: 900;
+      font-size: 20px;
+      /* letter-spacing: 1px; */
+    }
+    .tail {
+      /* border: 2px solid tomato; */
+      padding-left: 18px;
+      padding-right: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: bisque;
+      margin-top: -20px;
+      font-weight: 700;
+    }
+    #generic-text {
+      font-weight: 400;
+    }
+    .mastercard-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 32.338583px;
+      backdrop-filter: blur(25px);
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+    }
+    .generic-text_for-back {
+      font-size: smaller;
+      font-weight: 400;
+      margin-bottom: 6px;
+      margin-left: 10px;
+      margin-right: 2px;
+    }
+    .black-stripe {
+      border: 2px solid black;
+      background-color: black;
+      margin-top: 0px;
+      height: 30px;
+      padding: 0px;
+      margin-right: -8px;
+      margin-left: -8px;
+    }
+    .cvv_parent-container {
+      /* border: 2px solid red; */
+      height: 50px;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .blurred-box {
+      border: 1px solid rgb(206, 219, 219);
+      border-radius: 10px;
+      height: 40px;
+      width: 260px;
+      background-color: azure;
+      /* margin-bottom: 2px; */
+    }
+    .gray-stripes {
+      /* border: 1px solid black; */
+      width: 253px;
+      height: 6px;
+      margin: 4px;
+      border-radius: 2px;
+      background-color: #e1d9d9;
+    }
+    #first-strip-margin-top {
+      margin-top: 1px;
+    }
+    .cvv-box {
+      /* border: 2px solid rgb(43, 226, 141); */
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      width: 29px;
+      height: 25px;
+      background-color: azure;
+      color: black;
+      align-content: center;
+    }
+    #dummyText {
+      margin-top: -6px;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="card">
+        <div class="mastercard-front">
+          <div class="head">
+            <div class="head-left">
+              <svg
+                class="mastercard_icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="mastercard"
+              >
+                <path
+                  fill="#FF5F00"
+                  d="M15.245 17.831h-6.49V6.168h6.49v11.663z"
+                ></path>
+                <path
+                  fill="#EB001B"
+                  d="M9.167 12A7.404 7.404 0 0 1 12 6.169 7.417 7.417 0 0 0 0 12a7.417 7.417 0 0 0 11.999 5.831A7.406 7.406 0 0 1 9.167 12z"
+                ></path>
+                <path
+                  fill="#F79E1B"
+                  d="M24 12a7.417 7.417 0 0 1-12 5.831c1.725-1.358 2.833-3.465 2.833-5.831S13.725 7.527 12 6.169A7.417 7.417 0 0 1 24 12z"
+                ></path>
+              </svg>
+              <p>Master Card</p>
+            </div>
+            <div class="head-right">
+              <img src="./chip.png" alt="" id="chip_img" />
+            </div>
+          </div>
+          <div class="mid">
+            <p class="numberHeading">Card Number</p>
+            <p class="actualnumber">8050 5040 2030 3020</p>
+          </div>
+          <div class="tail">
+            <p>Soham Santra</p>
+            <p>
+              <span id="generic-text">Valid Thru</span><br />
+              05/27
+            </p>
+          </div>
+        </div>
+        <div class="mastercard-back">
+          <p class="generic-text_for-back">
+            For customer service call +977 4343 3433 or email at
+            mastercard@gmail.com
+          </p>
+          <div class="black-stripe"></div>
+          <div class="cvv_parent-container">
+            <div class="blurred-box">
+              <div class="gray-stripes" id="first-strip-margin-top"></div>
+              <div class="gray-stripes"></div>
+              <div class="gray-stripes"></div>
+              <div class="gray-stripes"></div>
+            </div>
+            <div class="cvv-box">722</div>
+          </div>
+          <div class="generic-text_for-back" id="dummyText">
+            <p>
+              This is a dummy text. Nothing important. Just to cover this place.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

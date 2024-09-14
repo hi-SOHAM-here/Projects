@@ -1,0 +1,180 @@
+/* //////////////////////CSS for markup.html starts here*/
+body {
+  margin: 0px;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.7) url("../images/featured-tiny-png-101.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  /* z-index: -2; */
+  
+}
+.container {
+  border: 2px solid rgb(89, 88, 88);
+  margin-left: 5px;
+  margin-top: 0px;
+  height: 93px;
+  background-color: rgb(89, 88, 88);
+  height: 80px;
+  /* opacity: 0.5; */
+}
+#logo {
+  width: 80px;
+  height: 80px;
+  /* float: left; */
+  position: relative;
+  top: -62px;
+  left: 0px;
+}
+.navbar {
+  /* border: 2px solid green; */
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 100px;
+  list-style: none;
+  /* font-family: "Agbalumo", system-ui; */
+  /* float: left; */
+}
+.border {
+  /* border: 2px solid rgb(114, 114, 114); */
+  padding: 8px;
+}
+
+#Home {
+  position: relative;
+  top: 5px;
+  left: -75px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 19px;
+}
+#Home:hover {
+  /* border: 2px solid; */
+  border-radius: 50px;
+  border: 2px solid rgb(114, 114, 114);
+  background-color: rgb(114, 114, 114);
+}
+#About {
+  position: relative;
+  top: -17px;
+  left: -3px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 19px;
+  /* background-color: rgb(114, 114, 114); */
+}
+#About:hover {
+  /* border: 2px solid; */
+  border-radius: 50px;
+  border: 2px solid rgb(114, 114, 114);
+  background-color: rgb(114, 114, 114);
+}
+#Services {
+  position: relative;
+  top: -39px;
+  left: 95px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 19px;
+  /* background-color: rgb(114, 114, 114); */
+}
+#Services:hover {
+  /* border: 2px solid; */
+  border-radius: 50px;
+  border: 2px solid rgb(114, 114, 114);
+  background-color: rgb(114, 114, 114);
+}
+#Pricing {
+  position: relative;
+  top: -61px;
+  left: 185px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 19px;
+  /* background-color: rgb(114, 114, 114); */
+}
+#Pricing:hover {
+  /* border: 2px solid; */
+  border-radius: 50px;
+  border: 2px solid rgb(114, 114, 114);
+  background-color: rgb(114, 114, 114);
+}
+#Stories {
+  position: relative;
+  top: -83px;
+  left: 269px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 19px;
+  /* background-color: rgb(114, 114, 114); */
+}
+#Stories:hover {
+  /* border: 2px solid; */
+  border: 2px solid rgb(114, 114, 114);
+  border-radius: 50px;
+  background-color: rgb(114, 114, 114);
+}
+#Contact {
+  position: relative;
+  top: -105px;
+  left: 415px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 19px;
+  /* background-color: rgb(114, 114, 114); */
+}
+#Contact:hover {
+  /* border: 2px solid; */
+  border-radius: 50px;
+  border: 2px solid rgb(114, 114, 114);
+  background-color: rgb(114, 114, 114);
+}
+
+#signinbutton {
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 17px;
+  margin-right: 22px;
+  float: right;
+  width: 117px;
+  height: 42px;
+  font-size: 23px;
+  color: antiquewhite;
+  background-color: #db5757;
+}
+#signinbutton:hover {
+  border: 2px solid black;
+  background-color: #d22626; /* Darker blue on hover */
+  cursor: pointer;
+}
+.container2 {
+  border-style: outset;
+  border: 7px solid wheat;
+  padding: 9px;
+  margin: auto;
+  margin-top: 120px;
+  height: 228px;
+  width: 66%;
+  color: #ffef96;
+  font-size: 31px;
+}
+.signinbutton2 {
+  position: relative;
+  border-radius: 28px;
+  bottom: 27px;
+  right: 10px;
+  border: 2px solid black;
+  text-align: center;
+  float: right;
+  width: 244px;
+  height: 59px;
+  font-size: 34px;
+  color: black;
+  background-color: bisque;
+}
+.signinbutton2:hover {
+  background-color: rgb(248, 208, 160); /* Darker blue on hover */
+  cursor: pointer;
+}
+/* //////////////////////CSS for markup.html ends here*/
